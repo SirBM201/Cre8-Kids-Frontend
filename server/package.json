@@ -1,7 +1,7 @@
 {
   "name": "cre8kids-backend",
   "version": "1.0.0",
-  "description": "A comprehensive backend API for the Cre8 Kids learning platform, built with Express.js, SQLite, and JWT authentication.",
+  "description": "A comprehensive backend API for the Cre8 Kids learning platform, built with Express.js, MongoDB Atlas, and JWT authentication.",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -14,14 +14,17 @@
     "kids",
     "learning",
     "api",
-    "express"
+    "express",
+    "mongodb"
   ],
   "author": "SirBM",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3"
   },
   "engines": {
     "node": ">=18.0.0"
