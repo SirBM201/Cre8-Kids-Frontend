@@ -1,0 +1,29 @@
+{
+  "name": "cre8kids-backend",
+  "version": "1.0.0",
+  "description": "A comprehensive backend API for the Cre8 Kids learning platform, built with Express.js, SQLite, and JWT authentication.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "education",
+    "kids",
+    "learning",
+    "api",
+    "express"
+  ],
+  "author": "SirBM",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
