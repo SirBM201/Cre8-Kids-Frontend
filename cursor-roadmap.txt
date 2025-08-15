@@ -1,0 +1,245 @@
+# Cre8 Kids — AI Generation Prompt (No Code, Copy–Paste Ready)
+
+Use this specification to generate a production‑quality **Cre8 Kids** app (ages 3–12) with a kid‑safe learning experience, a simple parent dashboard, and a demo classroom‑lite flow. Do **not** include public chats, social feeds, or targeted ads in kid mode.
+
+—
+
+## 1) Purpose & Vision
+
+* **Purpose:** Help children learn and create safely through stories, songs, quizzes, and gentle creativity while giving parents full control and insight.
+* **Vision:** Creation‑first, kid‑safe learning that works for families and schools globally, including low‑data regions.
+
+## 2) Primary Personas
+
+* **Child (3–12):** Consumes interactive stories/songs/quizzes; earns badges; uses simple drawing and co‑play prompts.
+* **Parent/Guardian:** Sets safety rules, manages screen time, reviews progress, and approves content.
+* **Teacher (Verified/School):** Creates assignments from curated content; uses closed class codes; views mastery snapshots.
+
+## 3) Core Principles
+
+* **Safety by design:** No public comments/DMs; curated catalog; clear age bands.
+* **Learning before entertainment:** Focus‑Before‑Fun rule unlocks fun after learning minutes.
+* **Global & inclusive:** Localization, accessibility options, and offline support.
+* **Transparency:** No targeted ads in kid mode; clear parent controls and reports.
+
+—
+
+## 4) Platforms & Scope (MVP+)
+
+* **Platforms:** Web app (desktop + mobile responsive). Optional PWA caching is planned but not required for MVP.
+* **Auth:** No external login yet. Use a **Parent PIN gate** (demo) to enter parent/teacher areas.
+* **Data:** Local persistence for demo (device‑only). No external APIs.
+
+—
+
+## 5) Top‑Level Navigation (Left/Center/Right cues)
+
+* **Kid Mode (center‑heavy, large tiles):** Home, Stories, Songs, Quizzes, Calm Corner, Co‑Play, Offline Packs, Enter Class Code.
+* **Parent Dashboard (left sidebar):** Dashboard, Profiles, Controls, Reports, Downloads.
+* **Educator (accessed via Parent area):** Assignments, Upload (demo lesson builder).
+
+—
+
+## 6) Functional Requirements
+
+### 6.1 Kid Mode
+
+1. **Home:** Age‑appropriate grid of sections; big tap targets (minimum 44px); friendly micro‑copy.
+2. **Stories:** Curated list by age band; each opens a reader with Read‑Aloud controls and page navigation.
+3. **Story Reader:** Read‑Aloud using device text‑to‑speech; highlight words as read; Next/Prev page; Stop Reading; larger text toggle.
+4. **Songs:** Audio playback list. If Focus‑Before‑Fun not met, tiles show a soft lock overlay with the reason.
+5. **Quizzes:** Multiple choice; immediate gentle feedback; end screen shows score and badges earned.
+6. **Calm Corner:** Short mindfulness audios, breathing animation, and 2–3 “big feelings” mini‑stories.
+7. **Co‑Play:** Guided 10–15 minute parent‑child session cards (read together, talk about the picture, 3 quick quiz questions).
+8. **Offline Packs:** Show available downloadable packs; button to save/remove locally; visible checkmark when available offline.
+9. **Enter Class Code:** Simple input; opens the assigned story/quiz; submission uses emoji‑only reaction and marks as done.
+
+### 6.2 Parent Dashboard (PIN‑gated)
+
+1. **Dashboard:** Today’s learning minutes, quizzes done, badges earned, and a “2‑Minute Daily Brief” (one conversation prompt).
+2. **Profiles:** Create/edit kid profiles (name, age band 3–5, 6–8, 9–12, avatar color). Sibling fairness tools: optional turn‑timer.
+3. **Controls:** Set/change 4‑digit Parent PIN; language; Focus‑Before‑Fun settings; bedtime lock hours; accessibility toggles; content category whitelist; downloads management.
+4. **Reports:** Reading vs numeracy progress; streak days; badges log; export button (placeholder). Emphasize clarity and printable layout.
+5. **Downloads:** Offline Packs management; seasonal printable kits section (links to parent‑view PDFs).
+
+### 6.3 Educator (demo classroom‑lite)
+
+1. **Assignments:** Create assignment from any story/quiz; generate a random class code; view submitted completions (count only, no names).
+2. **Upload (demo lesson builder):** Simple form to create a short story or quiz for local use; requires Parent PIN to access.
+
+—
+
+## 7) Safety, Privacy & Compliance (MVP)
+
+* No public chats, comments, or DMs.
+* No personal identifiers for kids (first‑name nickname allowed, no photos required).
+* No targeted ads in kid mode; sponsorships (if any) display in parent view only and are clearly labeled.
+* Minimal data footprint; all demo data stays on device.
+* Clear “Kid Mode” vs “Parent Mode” labels.
+
+—
+
+## 8) Localization & Accessibility
+
+* **Languages (initial):** English primary with examples for Yoruba, Hausa, Igbo. Ensure the UI supports right/left positioning cues but English remains LTR.
+* **Accessibility toggles:** Dyslexia‑friendly font option, high‑contrast theme, larger text size. Controls live under Parent → Controls.
+
+—
+
+## 9) Focus‑Before‑Fun Rules
+
+* Parent sets a daily learning minutes requirement (e.g., 15 minutes).
+* When requirement is met, fun sections (e.g., Songs) unlock for a set number of minutes.
+* Lock overlay message to be friendly and explanatory.
+
+—
+
+## 10) Offline Mode (Demo)
+
+* Parents can save Offline Packs (stories + quizzes) for device‑only use.
+* Show status: “Downloaded” checkmark and a REMOVE option.
+* No external network calls; simulate offline with local persistence.
+
+—
+
+## 11) Content Catalog (Seed Content)
+
+Use this content to pre‑populate the app. Keep language kid‑friendly.
+
+### Stories (at least 2)
+
+* **Zee and the Moon Kite** (Age 6–8):
+
+  * Page 1: “Zee tied a ribbon to her kite and wished to touch the moon.”
+  * Page 2: “The wind whooshed. The kite tugged. The moon smiled back.”
+* **Colors in the Market** (Age 3–5):
+
+  * Page 1: “Red tomatoes, green leaves, yellow mangoes — what colors do you see?”
+  * Page 2: “Blue buckets splash! Clap for the colors with me!”
+
+### Quizzes (at least 1)
+
+* **Market Colors Quiz** (Age 3–5):
+
+  * Q1: What color are the tomatoes? Choices: Blue, Red, Purple. Correct: Red.
+  * Q2: Which thing splashes? Choices: Bucket, Leaf, Cloud. Correct: Bucket.
+
+### Songs (list at least 2 placeholders)
+
+* Sunny Steps (30–60s instrumental loop)
+* Starry Hums (30–60s instrumental loop)
+
+### Calm Corner (3 items)
+
+* “Belly Breaths” 1‑minute audio
+* “Count 1–5 with Me” 30‑second audio
+* Mini‑story: “When I Feel Big Feelings” (4–6 sentences)
+
+### Co‑Play (1 guided card)
+
+* Title: “Market Color Hunt (Together)”
+* Steps: Read one story page aloud → Ask child to find colors at home → Answer 2 color questions → High‑five!
+
+—
+
+## 12) Badges (Examples)
+
+* “First Story!” — unlock on completing any story.
+* “Quiz Champ 5” — 5 correct answers total.
+* “Learning Streak 3” — learned on 3 consecutive days.
+
+—
+
+## 13) Data Entities (Described, not code)
+
+* **KidProfile:** id, display name/nickname, age band (3–5, 6–8, 9–12), avatar color, accessibility preferences.
+* **ParentSettings:** PIN (4 digits), language, Focus‑Before‑Fun thresholds, bedtime lock times, whitelist categories.
+* **ContentItem:** id, type (story, song, quiz), title, age band, tags, pages/text or audio reference, safety rating.
+* **Quiz:** id, title, age band, questions (prompt, 2–4 choices, correct index), estimated minutes.
+* **Progress:** per child: minutes learned by day, completed items list, quiz scores, streak count, badges earned.
+* **Assignment:** id, content ref, class code, assigned date, submitted count.
+* **OfflinePack:** id, name, included items list, status (downloaded or not).
+
+—
+
+## 14) UI/UX Guidelines
+
+* **Kid Mode:** Rounded shapes, soft shadows, bright but calm palette, minimal text per screen, friendly emojis where useful.
+* **Parent Mode:** Clean cards, readable charts, clear toggles, no dark patterns. Prominent “Kid Mode” switch.
+* **Navigation cues:** For instructions, include (left / right / center) so non‑technical users know where to tap/click.
+* **Tap targets:** Minimum 44×44 px equivalent. Large accessible typography.
+
+—
+
+## 15) Branding
+
+* **App name:** Cre8 Kids
+* **Logo:** Placeholder circle logo with a simple smiling star; allow easy replacement later.
+* **Color direction:** Primary sky‑blue, secondary sunny‑yellow, accent coral. Keep high‑contrast variant for accessibility.
+
+—
+
+## 16) Analytics (Private, Local for MVP)
+
+* Track: learning minutes, quizzes completed, streak days, badges earned. Shown only to parent locally.
+* No third‑party trackers. No network calls in MVP.
+
+—
+
+## 17) Monetization (Placement Only, No Payments in MVP)
+
+* Family Premium and School Plan are described in copy but not active.
+* Seasonal printable kits shown as informational links in Parent → Downloads.
+* Absolutely no ads in kid mode.
+
+—
+
+## 18) Acceptance Criteria (Must Pass)
+
+1. Kid can open a story, press Read‑Aloud, and navigate pages. Stop works.
+2. Quiz runs end‑to‑end; at least one badge unlocks on completion.
+3. Focus‑Before‑Fun: Songs show a lock until the daily learning requirement is met; then unlocks for the set time.
+4. Parent PIN gate: Default 1234; can be changed under Controls.
+5. Parent Daily Brief displays today’s minutes learned, activities completed, and a conversation prompt.
+6. Offline Packs: At least one pack can be saved and removed; status updates visibly.
+7. Enter Class Code: Opening and submitting an assignment works; submission counter increments.
+8. Language setting updates key labels across the app (English + one example language).
+9. Accessibility toggles clearly change typography/contrast/size.
+
+—
+
+## 19) Out of Scope for MVP (Document but don’t build now)
+
+* Real user accounts or cloud sync
+* Real educator verification/KYC and payments
+* Speech recognition for reading assessment (future v2)
+* Full PWA offline caching (future)
+
+—
+
+## 20) What to Output (for any AI generator)
+
+* A complete working app that fulfills all the functional requirements above using any standard modern stack.
+* Include clear folder structure and file naming of your choice, but keep non‑technical users in mind.
+* Seed the app with the provided stories, quiz, songs (as placeholders), Calm Corner, Co‑Play card, badges, and one Offline Pack.
+* Provide a short README describing: Kid vs Parent areas, Parent PIN, Focus‑Before‑Fun, Offline Packs, Assignments demo, Localization and Accessibility toggles, and what features are planned next.
+* Do not include any public chat, social feeds, third‑party trackers, or targeted ads in kid mode.
+
+—
+
+## 21) QA Checklist (Run before delivery)
+
+* All pages reachable from navigation; back/home works everywhere.
+* Touch targets and font sizes are child‑friendly.
+* Locks and unlocks behave predictably across app restarts on the same device.
+* Language switch persists; accessibility toggles persist.
+* Parent Controls cannot be opened without the current PIN.
+* Seed content loads without network; Offline Packs visibly affect availability.
+
+—
+
+## 22) Future Roadmap (Reference Only)
+
+* AI Personal Story Maker; Reading‑aloud Speech Coach (on‑device speech recognition); Mission Trails; Educator Marketplace; PWA caching; School analytics exports; Sponsor‑a‑Classroom.
+
+End of prompt. Generate exactly what is specified above with no extra experimental features.

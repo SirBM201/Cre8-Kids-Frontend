@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .btn-accent {
+    @apply bg-accent-500 hover:bg-accent-600 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .card-kid {
+    @apply bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-primary-100;
+  }
+  
+  .card-parent {
+    @apply bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-200 border border-gray-200;
+  }
+  
+  .text-kid {
+    @apply font-kid text-lg leading-relaxed;
+  }
+  
+  .text-parent {
+    @apply font-parent text-base leading-relaxed;
+  }
+  
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary-400 to-primary-600;
+  }
+  
+  .gradient-secondary {
+    @apply bg-gradient-to-br from-secondary-400 to-secondary-600;
+  }
+  
+  .gradient-accent {
+    @apply bg-gradient-to-br from-accent-400 to-accent-600;
+  }
+}
+
+/* Custom scrollbar for kids */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-500;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* High contrast mode */
+.high-contrast {
+  @apply bg-black text-white;
+}
+
+.high-contrast * {
+  @apply border-white;
+}
+
+/* Dyslexia-friendly font option */
+.dyslexia-friendly {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+}
