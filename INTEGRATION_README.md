@@ -58,7 +58,7 @@ The frontend and backend are now successfully connected and communicating! Here'
    ```
 
 2. **Open the application** in your browser:
-   - Navigate to `http://localhost:3000`
+   - Navigate to `http://localhost:3000` (development) or your production URL
    - You'll be redirected to the login page
 
 3. **Test Authentication**:
@@ -68,7 +68,7 @@ The frontend and backend are now successfully connected and communicating! Here'
      - **Admin**: `admin@cre8kids.com` / `admin123`
 
 4. **Test API Integration**:
-   - After logging in, navigate to `http://localhost:3000/test`
+   - After logging in, navigate to `http://localhost:3000/test` (development) or your production URL + /test
    - This page will display all content fetched from the backend
    - You should see stories, quizzes, songs, calm corner items, co-play cards, offline packs, and badges
 

@@ -20,7 +20,7 @@ A comprehensive educational platform designed for children, featuring interactiv
 - **Build Command**: `npm run build`
 - **Output Directory**: `dist`
 - **Required Environment Variables**:
-  - `VITE_API_URL` (set to your Koyeb backend URL)
+  - `VITE_API_URL` (set to https://difficult-sindee-bmsconcept-eaac9d0f.koyeb.app)
 
 ## 🏗️ **Architecture**
 

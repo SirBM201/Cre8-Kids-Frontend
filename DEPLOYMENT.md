@@ -96,7 +96,7 @@ docker-compose down
 4. Set output directory: `dist`
 5. Add environment variables:
    ```
-   VITE_API_BASE_URL=https://your-backend-domain.com/api
+   VITE_API_URL=https://difficult-sindee-bmsconcept-eaac9d0f.koyeb.app
    ```
 
 #### Deploy to Netlify
